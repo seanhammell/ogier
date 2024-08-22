@@ -9,9 +9,7 @@ namespace graphics {
 class Drawable {
  public:
   Drawable();
-
   Drawable(const Drawable &) = delete;
-
   Drawable &operator=(const Drawable &) = delete;
 
   virtual ~Drawable() = 0;
@@ -20,15 +18,11 @@ class Drawable {
 
  protected:
   SDL_Texture *texture();
-
   int width() const;
-
   int height() const;
 
   void set_texture(SDL_Texture *texture);
-
   void set_width(const int width);
-
   void set_height(const int height);
 
  private:
