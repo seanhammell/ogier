@@ -14,10 +14,10 @@ class Graphics {
 
   SDL_Renderer *renderer();
 
-  void set_window_width(const int window_width);
-  void set_window_height(const int window_height);
-  void set_virtual_width(const int virtual_width);
-  void set_virtual_height(const int virtual_height);
+  static void set_window_width(const int window_width);
+  static void set_window_height(const int window_height);
+  static void set_virtual_width(const int virtual_width);
+  static void set_virtual_height(const int virtual_height);
 
  private:
   Graphics();

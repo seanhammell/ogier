@@ -4,7 +4,7 @@ TARGET_EXEC := strider
 CXX := clang++
 CXXFLAGS := -g -std=c++17 -pedantic-errors -Wall -Wextra -Werror
 CXXFLAGS += -I . -I /opt/homebrew/include
-LDFLAGS := -L /opt/homebrew/lib
+LDFLAGS := -L /opt/homebrew/lib -l SDL2
 
 # Finds all of the .cc files in the specified ./src directories.
 SRC_DIR := ./src

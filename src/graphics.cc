@@ -18,7 +18,7 @@ bool Graphics::Init() {
 
   if (SDL_Init(SDL_INIT_VIDEO) != 0) {
     fprintf(stderr, "Error initializing SDL: %s\n", SDL_GetError());
-    return false;
+    goto quit;
   }
 
   SDL_Rect monitor;
@@ -28,22 +28,28 @@ bool Graphics::Init() {
   window_ = SDL_CreateWindow("", monitor.x, monitor.y, window_width_, window_height_, SDL_WINDOW_SHOWN);
   if (!window_) {
     fprintf(stderr, "Error creating window: %s\n", SDL_GetError());
-    return false;
+    goto quit;
   }
 
   renderer_ = SDL_CreateRenderer(window_, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
   if (!renderer_) {
     fprintf(stderr, "Error creating renderer: %s\n", SDL_GetError());
-    return false;
+    goto quit;
   }
 
-  if (SDL_RenderSetLogicalSize(renderer_, virtual_width_, virtual_height_) != 0) {
-    fprintf(stderr, "Error setting virtual resolution: %s\n", SDL_GetError());
-    return false;
+  if (virtual_width_ > 0 && virtual_height_ > 0) {
+    if (SDL_RenderSetLogicalSize(renderer_, virtual_width_, virtual_height_) != 0) {
+      fprintf(stderr, "Error setting virtual resolution: %s\n", SDL_GetError());
+      goto quit;
+    }
   }
 
   initialized_ = true;
-  return true;
+  return initialized_;
+
+quit:
+  Quit();
+  return initialized_;
 }
 
 SDL_Renderer *Graphics::renderer() { return renderer_; }
