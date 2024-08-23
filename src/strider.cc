@@ -3,10 +3,11 @@
 #include "src/graphics.h"
 
 int main() {
-  strider::graphics::Graphics::set_window_width(720);
-  strider::graphics::Graphics::set_window_height(480);
+  using graphics = ::strider::graphics::Graphics;
+  graphics::set_window_width(720);
+  graphics::set_window_height(480);
 
-  strider::graphics::Graphics::GetInstance().Init();
+  graphics::GetInstance().Init();
 
   SDL_Event e;
   while (true) {
@@ -16,9 +17,9 @@ int main() {
       }
     }
 
-    SDL_SetRenderDrawColor(strider::graphics::Graphics::GetInstance().renderer(), 0xFF, 0xFF, 0xFF, 0xFF);
-    SDL_RenderClear(strider::graphics::Graphics::GetInstance().renderer());
-    SDL_RenderPresent(strider::graphics::Graphics::GetInstance().renderer());
+    SDL_SetRenderDrawColor(graphics::GetInstance().renderer(), 0xFF, 0xFF, 0xFF, 0xFF);
+    SDL_RenderClear(graphics::GetInstance().renderer());
+    SDL_RenderPresent(graphics::GetInstance().renderer());
   }
 
   return 0;
