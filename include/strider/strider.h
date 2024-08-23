@@ -3,17 +3,10 @@
 
 namespace strider {
 
-// 1. Load function sets Strider configs
-// 2. Main function calls Init after Load to apply configs
+void SetWindowSize(const int window_width, const int window_height);
+void SetVirtualResolution(const int virtual_width, const int virtual_height);
 
-// Set window size function
-
-// Set virtual resolution function
-
-// Load function
-  // This is where the user sets Strider configs
-
-// main function in .cc
+void Load();
 
 }  // namespace strider
 

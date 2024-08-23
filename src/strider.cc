@@ -1,11 +1,26 @@
 #include "SDL2/SDL.h"
 
+#include "include/strider/strider.h"
 #include "src/graphics.h"
+
+namespace strider {
+
+void SetWindowSize(const int window_width, const int window_height) {
+  graphics::Graphics::set_window_width(window_width);
+  graphics::Graphics::set_window_height(window_height);
+}
+
+void SetVirtualResolution(const int virtual_width, const int virtual_height) {
+  graphics::Graphics::set_virtual_width(virtual_width);
+  graphics::Graphics::set_virtual_height(virtual_height);
+}
+
+}  // namspace strider
 
 int main() {
   using graphics = ::strider::graphics::Graphics;
-  graphics::set_window_width(720);
-  graphics::set_window_height(480);
+
+  strider::Load();
 
   graphics::GetInstance().Init();
 
