@@ -26,12 +26,12 @@ class Graphics {
 
   void Quit();
 
-  static bool initialized_;
+  inline static bool initialized_ = false;
 
-  static int window_width_;
-  static int window_height_;
-  static int virtual_width_;
-  static int virtual_height_;
+  inline static int window_width_ = 0;
+  inline static int window_height_ = 0;
+  inline static int virtual_width_ = 0;
+  inline static int virtual_height_ = 0;
 
   SDL_Window *window_;
   SDL_Renderer *renderer_;

@@ -10,12 +10,6 @@ namespace graphics {
 
 static Graphics graphics;
 
-bool Graphics::initialized_ = false;
-int Graphics::window_width_ = 0;
-int Graphics::window_height_ = 0;
-int Graphics::virtual_width_ = 0;
-int Graphics::virtual_height_ = 0;
-
 bool Graphics::Init() {
   assert(!initialized_);
 
