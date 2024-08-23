@@ -8,6 +8,8 @@ namespace graphics {
 
 class Graphics {
  public:
+  static Graphics& GetInstance();
+
   bool Init();
 
   SDL_Renderer *renderer();

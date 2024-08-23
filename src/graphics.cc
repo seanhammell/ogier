@@ -8,7 +8,10 @@
 namespace strider {
 namespace graphics {
 
-static Graphics graphics;
+Graphics& Graphics::GetInstance() {
+  static Graphics graphics;
+  return graphics;
+}
 
 bool Graphics::Init() {
   assert(!initialized_);
