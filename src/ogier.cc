@@ -1,9 +1,9 @@
 #include "SDL2/SDL.h"
 
-#include "include/strider/strider.h"
+#include "include/ogier/ogier.h"
 #include "src/graphics.h"
 
-namespace strider {
+namespace ogier {
 
 void SetWindowSize(const int window_width, const int window_height) {
   graphics::Graphics::set_window_width(window_width);
@@ -15,12 +15,12 @@ void SetVirtualResolution(const int virtual_width, const int virtual_height) {
   graphics::Graphics::set_virtual_height(virtual_height);
 }
 
-}  // namspace strider
+}  // namspace ogier
 
 int main() {
-  using graphics = ::strider::graphics::Graphics;
+  using graphics = ::ogier::graphics::Graphics;
 
-  strider::Load();
+  ogier::Load();
 
   graphics::GetInstance().Init();
 

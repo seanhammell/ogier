@@ -5,7 +5,7 @@
       "name": "Launch",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceRoot}/build/strider",
+      "program": "${workspaceRoot}/build/ogier",
       "args": [],
       "stopAtEntry": false,
       "cwd": ".",

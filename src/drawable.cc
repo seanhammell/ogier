@@ -1,6 +1,6 @@
 #include "src/drawable.h"
 
-namespace strider {
+namespace ogier {
 namespace graphics {
 
 Drawable::Drawable() : texture_(nullptr), width_(0), height_(0) {}
@@ -25,4 +25,4 @@ void Drawable::set_width(const int width) { width_ = width; }
 void Drawable::set_height(const int height) { height_ = height; }
 
 }  // namespace graphics
-}  // namespace strider
+}  // namespace ogier

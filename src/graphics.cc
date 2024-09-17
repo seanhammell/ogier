@@ -5,7 +5,7 @@
 
 #include "SDL2/SDL.h"
 
-namespace strider {
+namespace ogier {
 namespace graphics {
 
 Graphics& Graphics::GetInstance() {
@@ -90,4 +90,4 @@ void Graphics::Quit() {
 }
 
 }  // namespace graphics
-}  // namespace strider
+}  // namespace ogier

@@ -1,13 +1,13 @@
-#ifndef INCLUDE_STRIDER_STRIDER_H_
-#define INCLUDE_STRIDER_STRIDER_H_
+#ifndef INCLUDE_OGIER_OGIER_H_
+#define INCLUDE_OGIER_OGIER_H_
 
-namespace strider {
+namespace ogier {
 
 void SetWindowSize(const int window_width, const int window_height);
 void SetVirtualResolution(const int virtual_width, const int virtual_height);
 
 void Load();
 
-}  // namespace strider
+}  // namespace ogier
 
-#endif  // INCLUDE_STRIDER_STRIDER_H_
+#endif  // INCLUDE_OGIER_OGIER_H_

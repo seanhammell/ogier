@@ -1,4 +1,4 @@
-TARGET_EXEC := strider
+TARGET_EXEC := ogier
 
 # C++ compiler, compiler flags, include directories, and libraries.
 CXX := clang++

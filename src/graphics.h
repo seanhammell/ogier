@@ -3,7 +3,7 @@
 
 #include "SDL2/SDL.h"
 
-namespace strider {
+namespace ogier {
 namespace graphics {
 
 class Graphics {
@@ -40,6 +40,6 @@ class Graphics {
 };
 
 }  // namespace graphics
-}  // namespace strider
+}  // namespace ogier
 
 #endif  // SRC_GRAPHICS_H_
